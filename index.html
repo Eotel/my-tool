@@ -10,21 +10,31 @@
     <main>
       <h1>動画・音声の変換</h1>
 
-      <section class="panel" aria-labelledby="extract-title">
-        <h2 id="extract-title">音声を取り出す</h2>
+      <form id="form" class="panel">
+        <div class="step">
+          <label class="step-title" for="file">動画または音声のファイル</label>
+          <input id="file" type="file">
+        </div>
 
-        <label class="field" for="file">動画または音声のファイル</label>
-        <input id="file" type="file">
+        <fieldset id="operations" class="step" hidden>
+          <legend class="step-title">やりたいこと</legend>
+          <div id="operation-choices" class="choices"></div>
+        </fieldset>
 
-        <button id="run" type="button" disabled>音声を取り出す</button>
+        <fieldset id="formats" class="step" hidden>
+          <legend class="step-title">変えたあとの形式</legend>
+          <div id="format-choices" class="choices"></div>
+        </fieldset>
+
+        <button id="run" type="submit" hidden></button>
 
         <p id="status" role="status" aria-live="polite"></p>
 
         <div id="result" hidden>
-          <audio id="player" controls aria-label="取り出した音声"></audio>
-          <a id="save" class="button">mp3 を保存</a>
+          <div id="preview"></div>
+          <a id="save" class="button"></a>
         </div>
-      </section>
+      </form>
     </main>
 
     <footer>
