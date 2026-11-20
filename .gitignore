@@ -1,3 +1,7 @@
 
 # APM dependencies
 apm_modules/
+
+# Claude Code が作成する作業用のファイル
+.claude/worktrees/
+.claude/launch.json
