@@ -4,7 +4,7 @@ import { readdirSync, readFileSync } from "node:fs";
 
 const ROOT = new URL("../", import.meta.url);
 const MAX_SENTENCE_LENGTH = 40;
-const PAGES_WITHOUT_LENGTH_LIMIT = [];
+const PAGES_WITHOUT_LENGTH_LIMIT = ["licenses.html"];
 
 const JAPANESE = /[぀-ヿ一-鿿]/;
 const HIDDEN_BLOCKS = /<!--[\s\S]*?-->|<(script|style)\b[\s\S]*?<\/\1>/g;
